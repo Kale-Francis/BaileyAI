@@ -1,0 +1,209 @@
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1A3C5E; /* Dark Blue */
+    width: 250px;
+    padding: 20px;
+    color: #FFFFFF;
+    position: fixed;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sidebar .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 0.3s forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+.sidebar nav ul li:nth-child(1) { --i: 1; }
+.sidebar nav ul li:nth-child(2) { --i: 2; }
+.sidebar nav ul li:nth-child(3) { --i: 3; }
+.sidebar nav ul li:nth-child(4) { --i: 4; }
+.sidebar nav ul li:nth-child(5) { --i: 5; }
+.sidebar nav ul li:nth-child(6) { --i: 6; }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sidebar nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li.active a {
+    background-color: #3B82F6; /* Blue */
+}
+
+/* Dashboard */
+.dashboard {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 36px;
+}
+
+.user-info {
+    font-size: 14px;
+    color: #D3CFCF;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.overview h2, .recent-activity h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stats-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stats-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.stats-card p {
+    font-size: 24px;
+    color: #1A3C5E;
+}
+
+.recent-activity {
+    margin-top: 40px;
+}
+
+.recent-activity table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activity th, .recent-activity td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #D3CFCF;
+}
+
+.recent-activity th {
+    background-color: #1A3C5E;
+    color: #FFFFFF;
+}
+
+.recent-activity td {
+    color: #4A4A4A;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar .hamburger {
+        display: block;
+    }
+
+    .dashboard {
+        margin-left: 0;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .stats-card {
+        width: 100%;
+    }
+
+    .recent-activity table, .recent-activity th, .recent-activity td {
+        display: block;
+        width: 100%;
+    }
+
+    .recent-activity th {
+        display: none;
+    }
+
+    .recent-activity td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .recent-activity td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+    }
+}

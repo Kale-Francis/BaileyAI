@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels - Bailey AI</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">Bailey AI</div>
+        <div class="hamburger" onclick="toggleSidebar()">☰</div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Dashboard</a></li>
+                <li><a href="#" onclick="showUploadModal()">New Recap</a></li>
+                <li><a href="my-recaps.html">My Recaps</a></li>
+                <li class="active"><a href="reels.html">Reels</a></li>
+                <li><a href="projects.html">Project Management</a></li>
+                <li><a href="upgrade.html">Upgrade Plan</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>Reels</h1>
+            <div class="user-info">
+                <span>Welcome, John Doe</span> | <span>Recaps Used: 5/10 | Storage: 2.1GB/10GB</span>
+                <a href="../landing/index.html" class="logout-link">Log Out</a>
+            </div>
+        </header>
+
+        <!-- Reels Section -->
+        <section class="reels">
+            <h2>Generate Reels from Video Recaps</h2>
+            <div class="recap-grid" id="video-recaps-grid">
+                <!-- Dynamically populated with video recaps -->
+            </div>
+        </section>
+    </main>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

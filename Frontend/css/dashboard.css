@@ -1,0 +1,378 @@
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1A3C34; /* Dark Green */
+    width: 250px;
+    padding: 20px;
+    color: #FFFFFF;
+    position: fixed;
+    height: 100%;
+    transition: transform 0.3s ease; /* Animation for sidebar toggle */
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sidebar .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 0.3s forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+.sidebar nav ul li:nth-child(1) { --i: 1; }
+.sidebar nav ul li:nth-child(2) { --i: 2; }
+.sidebar nav ul li:nth-child(3) { --i: 3; }
+.sidebar nav ul li:nth-child(4) { --i: 4; }
+.sidebar nav ul li:nth-child(5) { --i: 5; }
+.sidebar nav ul li:nth-child(6) { --i: 6; }
+.sidebar nav ul li:nth-child(7) { --i: 7; }
+.sidebar nav ul li:nth-child(8) { --i: 8; }
+.sidebar nav ul li:nth-child(9) { --i: 9; }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sidebar nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li.active a {
+    background-color: #28A745;
+}
+
+/* Dashboard */
+.dashboard {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.dashboard-section {
+    display: none;
+}
+
+.dashboard-section.active {
+    display: block;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 36px;
+}
+
+.user-info {
+    font-size: 14px;
+    color: #D3CFCF;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.logout-link {
+    color: #28A745;
+    text-decoration: none;
+}
+
+.welcome h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.quick-actions h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ongoing-recaps, .recent-recaps, .project-management, .recap-stats, .reels, .my-recaps {
+    margin-top: 40px;
+}
+
+.ongoing-recaps h3, .recent-recaps h3, .project-management h3, .recap-stats h3, .reels h2, .my-recaps h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.recap-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.recap-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recap-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.recap-placeholder {
+    background-color: #1A3C34;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.recap-card h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.recap-card p {
+    font-size: 14px;
+    color: #D3CFCF;
+}
+
+.share-button, .generate-reel-button {
+    background-color: #28A745;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.share-button:hover, .generate-reel-button:hover {
+    background-color: #218838;
+}
+
+.project-management table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-management th, .project-management td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #D3CFCF;
+}
+
+.project-management th {
+    background-color: #1A3C34;
+    color: #FFFFFF;
+}
+
+.project-management td {
+    color: #4A4A4A;
+}
+
+.action-button {
+    background-color: #28A745;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #218838;
+}
+
+.recap-stats .stats-box {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recap-stats p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.recap-stats p a {
+    color: #28A745;
+    text-decoration: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.spinner {
+    border: 4px solid #D3CFCF;
+    border-top: 4px solid #28A745;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+    margin-top: 10px;
+    color: #4A4A4A;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar .hamburger {
+        display: block;
+    }
+
+    .dashboard {
+        margin-left: 0;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .recap-card {
+        width: 100%;
+    }
+
+    .project-management table, .project-management th, .project-management td {
+        display: block;
+        width: 100%;
+    }
+
+    .project-management th {
+        display: none;
+    }
+
+    .project-management td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .project-management td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+    }
+}

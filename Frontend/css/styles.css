@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5; /* Light Gray */
+    color: #4A4A4A; /* Dark Gray */
+}
+
+/* Shared Button Styles */
+.cta-button {
+    background-color: #28A745; /* Green */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #1A3C34; /* Dark Green */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #D3CFCF; /* Light Gray */
+}
+
+.secondary-link {
+    display: block;
+    color: #28A745;
+    text-decoration: none;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.trust-signals {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #D3CFCF;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #FFFFFF; /* White */
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card .icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #D3CFCF;
+}
+
+/* Demo Section */
+.demo {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F5F5F5;
+}
+
+.demo h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.demo-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.demo-placeholder {
+    background-color: #1A3C34; /* Dark Green */
+    color: #FFFFFF;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background-color: #FFFFFF; /* White */
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    color: #D3CFCF;
+    margin-bottom: 20px;
+}
+
+.pricing-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #D3CFCF;
+}
+
+/* Social Proof Section */
+.social-proof {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.social-proof h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.testimonial-card span {
+    color: #D3CFCF;
+}
+
+.stats {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #D3CFCF;
+}
+
+/* Footer */
+footer {
+    background-color: #1A3C34; /* Dark Green */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-links a {
+    color: #28A745;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #D3CFCF;
+}
+
+footer a {
+    color: #28A745;
+    text-decoration: none;
+}
+
+/* Header for Signup/Login Pages */
+.header {
+    background-color: #1A3C34;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .back-link {
+    color: #28A745;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Responsiveness for Landing, Signup, and Login */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .feature-card, .pricing-card, .testimonial-card {
+        width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
